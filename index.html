@@ -1,270 +1,126 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EJ</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" 
+        crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src ="typed.js" type="text/javascript"></script>
-    
-
-
-    <style type="text/css">
-
-
-    	
-    	 a:hover{
-    	 	border-bottom: 5px solid #1a9fed;
-    	}
-    	body{
-    		height: 100%;
-    	}
-    	.parallax {
-		    /* The image used */
-		    background-image: url("city.jpg");
-		    max-width: 100%;
-    		max-height: 100%;
-
-		    /* Set a specific height */
-		    min-height: 500px; 
-
-		    /* Create the parallax scrolling effect */
-		    background-attachment: fixed;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-size: cover;
-		}
-		.parallax2{
-			background-image: url("learn.jpg");
-		    max-width: 100%;
-    		max-height: 100%;
-
-		    /* Set a specific height */
-		    min-height: 500px; 
-
-		    /* Create the parallax scrolling effect */
-		    background-attachment: fixed;
-		    background-position: center;
-		    background-repeat: no-repeat;
-		    background-size: cover;
-		}
-		.typed-cursor{
-            opacity: 1;
-            font-weight: 100;
-            font-size: 36px;
-            -webkit-animation: blink 0.7s infinite;
-            -moz-animation: blink 0.7s infinite;
-            -ms-animation: blink 0.7s infinite;
-            -o-animation: blink 0.7s infinite;
-            animation: blink 0.7s infinite;
-        }
-		.intro{
-			font-family: sans-serif;
-		}
-
-		@-keyframes blink{
-            0% { opacity:1; }
-            50% { opacity:0; }
-            100% { opacity:1; }
-        }
-        @-webkit-keyframes blink{
-            0% { opacity:1; }
-            50% { opacity:0; }
-            100% { opacity:1; }
-        }
-        @-moz-keyframes blink{
-            0% { opacity:1; }
-            50% { opacity:0; }
-            100% { opacity:1; }
-        }
-        @-ms-keyframes blink{
-            0% { opacity:1; }
-            50% { opacity:0; }
-            100% { opacity:1; }
-        }
-        @-o-keyframes blink{
-            0% { opacity:1; }
-            50% { opacity:0; }
-            100% { opacity:1; }
-        }
-
-        .text-editor-wrap {
-		  display: block;
-		  position: relative;
-		  top: 20%;
-		  margin: auto;
-		  max-width: 530px;
-		  border-radius: 10px;
-		  box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
-		  clear: both;
-		  overflow: hidden;
-		  -webkit-transition: all 0.5s ease-out;
-		  -moz-transition: all 0.5s ease-out;
-		  -ms-transition: all 0.5s ease-out;
-		  -o-transition: all 0.5s ease-out;
-		  transition: all 0.5s ease-out; 
-		}
-		.title-bar {
-		  padding: 5px 0;
-		  font-family: "Lucida Grande", sans-serif;
-		  font-size: 0.75em;
-		  text-align: center;
-		  text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 0px;
-		  background-color: #f8f8f8;
-		  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
-		  background-image: -moz-linear-gradient(top, #e8e8e8, #bcbbbc);
-		  background-image: linear-gradient(top, #e8e8e8, #bcbbbc);
-		  box-shadow: inset rgba(255, 255, 255, 0.7) 0px 1px 1px;
-		  border-bottom: #6a6a6a 1px solid; }
-
-		 .text-body {
-		  height: 250px;
-		  background-color: rgba(0, 0, 0, 0.85);
-		  padding: 10px;
-		  color: #06a536;
-		  text-shadow: #000 0px 1px 0px;
-		  font-family: "Consolas", "Courier New", "Courier";
-		  font-size: 1.45em;
-		  line-height: 1.40em;
-		  font-weight: 500;
-		  text-align: left;
-		  overflow: hidden;
-		  -webkit-transition: all 0.5s ease-out;
-		  -moz-transition: all 0.5s ease-out;
-		  -ms-transition: all 0.5s ease-out;
-		  -o-transition: all 0.5s ease-out;
-  		  transition: all 0.5s ease-out; } 
+    </head>
+    <body>
+        <header id="showcase" class="grid">
+                <div class="load box">
+                        <div class="b b1"></div>
+                        <div class="b b2"></div>
+                        <div class="b b3"></div>
+                        <div class="b b4"></div>
+                    </div>
+            <div class="bg-image"></div>
+            <div class="content-wrap">
 
 
-  		 #quote{
-  		 	font-family: "Indie Flower", "Consolas", "Courier", cursive;
-  		 	color: #d33913;
-  		 	font-size: 5em;
-  		 	font-size-adjust: 0.58;
-  		 } 
-  		 #quoteDiv{
-  		 	position: absolute;
-  		 	top: 25%;
-  		 	left: 20%;
-  		 }
-  		 .elvin-pic{
-  		 	border-style: solid;
-  		 	border-width: 3px;
-  		 	border-color: #1AA0DA;
-  		 	border-radius: 10px;
-  		 	max-width: 30%;
-  		 	max-height: 30%;
-  		 	position: relative;
-  		 	top: 120px;
+            
+                <h1>Hi, there! I am <span style="color: rgb(97, 218, 251)">Elvin</span> and I do magic with <span style="color: #00B200">code!</span></h1>
+                <p>I live with the passion for learning more about Computer Science, programming languages 
+                    and generally enjoy solving new challenges. I strive to become Solutions Architect in the near 
+                    future!
+                </p>
+             </div>
+             <div class="middle">
+                    <a class="btn" href="https://www.facebook.com/elvin.jafarli?ref=bookmarks">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn" href="https://github.com/jafarlie">
+                            <i class="fab fa-github"></i>
+                    </a>
+                    <a class="btn" href="https://twitter.com/jafarli_elvin">
+                            <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="btn" href="https://www.linkedin.com/in/elvin-jafarli/">
+                            <i class="fab fa-linkedin"></i>
+                    </a>
+            </div>
+        </header>
 
-  		 }
-  		 .jumbotron{
-  		 	max-width: 50%;
-  		 	position: relative;
-  		 	left: 40%;
-  		 	bottom: 180px;
-  		 	opacity: 0.7;
-  		 	font-family: "Indie Flower";
-  		 }
-	    .story{
-		color: #27A1D8;    
-	    }
+        <main id="main">
+            <!-- Section A-->
+            <section id="section-a" class="grid">
+                <div class="content-wrap">
+                    <h2 class="content-title">
+                        Web & Application Development
+                    </h2>
+                    <div class="content-text">
+                            <p>
+                                I am experienced Junior MERN Stack Developer. However, I do enjoy OOP 
+                                and Java is my favorite language for it!
+                            </p>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- Section B-->
+            <section id="section-b" class="grid">
+                    
+                    <div class="image-slider-wrapper">
+                            <h2 class="content-title-projects">
+                                    <span style="color: #379C41">M</span><span style="color: #CD7871">E</span><span style="color: #61DAFB">R</span><span style="color: #9BC049">N</span> <hr> <span style="color: #61DAFB">React</span><hr> <span style="color: tomato">Projects</span>
+                            </h2>
+                        <div class="image-slider">
+                        <a href="https://mern-stack-exercise-tracker.herokuapp.com/"><img class="slider-img" src="mern.png" alt="mern-stack-app"></a>
+                        </div>
+                        <div class="image-slider">
+                            <a href='https://evening-brook-83812.herokuapp.com'><img class="slider-img" src="./dad-jokes.png" alt='dad-jokes-react-app'></a>
+                        </div>
+                        <div class="image-slider">
+                            <a href="https://onerepo.herokuapp.com"><img class="slider-img" src="./onerepo.png" alt="cloud-storage-app"></a>
+                        </div>
+                        <div class="image-slider">
 
-
-    </style>
-
-    <title>My Website</title>
-  </head>
-  <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-	  <a class="navbar-brand" href="#">Elvin Jafarli</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="https://github.com/jafarlie/Resume/blob/master/Elvin%20Jafarli_New_Resume_2018.pdf">Resume<span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="https://github.com/jafarlie">Github</a>
-	      </li>
-	      <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Social Media
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="https://www.linkedin.com/in/elvin-jafarli/">Linkedin</a>
-	          <a class="dropdown-item" href="https://www.facebook.com/elvin.jafarli">Facebook</a>
-	          <a class="dropdown-item" href="https://www.instagram.com/jafarli.elvin/">Instagram</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href = 'mailto:jafarli.elvin1997@gmail.com?body=''&subject=''>Contact</a>
-	      </li>
-	    </ul>
-	  </div>
-	</nav>
-
-	<div class="container parallax">
-		<div id="quoteDiv" class="container">
-			<span id="quote" class="animated infinite bounce">Follow your passion!</span>
-		</div>
-	</div>
-
-	<div style="height:500px; background-color:#184F59;">
-
-		<div class="text-editor-wrap">
-			<div class="title-bar"><span class="title">Elvin Jafarli &mdash; bash &mdash; 80x<span class="terminal-height">25</span></span></div>
-			<div class="text-body">
-				$ <span id="typed"></span>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="container parallax2">
-		<div class="me">
-			<img src="Elvin.jpg" class="elvin-pic">
-			<div class="jumbotron">
-			  <div class="container">
-			    <h1 class="display-6 story">My Story</h1>
-			    <p class="lead">I study Math and Stats at the <i><b>University of Toronto</b></i>. Although, I love Computer Science more. I am knowledged in algorithms, data structures and some programming languages. I learn most of the stuff out of the school on my spare time. If you want to find more about my projects, visit my <a href="https://github.com/jafarlie">github</a>.</p>
-			  </div>
-			</div>
-		</div>
-	</div>
-
-	<div id="typed-strings" class="typed-cursor intro">
-	    <h1>Hello, my name is<strong> Elvin Jafarli.</strong></h1>
-	    <h1>I love Computer Science.</h1>
-	</div>
-	<span id="typed"></span>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script>
-    		
-    	var typed = new Typed("#typed", {
-
-    		stringsElement: '#typed-strings',
-    		typeSpeed: 90,
-    		backSpeed: 90,
-    		backDelay: 2000,
-    		loop: true,
-    		loopCount: false,
-    		
-    	});
-
-    </script>
-
-  </body>
+                        </div>
+                    </div>
+            </section>
+            <!--Section C-->
+            <section class="grid" id="section-c">
+                <div class="content-wrap">
+                    <h2 class="content-title">
+                        Education and Certificates
+                    </h2>
+                    <h3 style="color: tomato">University</h3><p> University of Toronto, Bachelor's Degree, 2014-2019, Mathematics and Computer Science</p>
+                    <h3 style="color: tomato">Certificates</h3><p>IELTS, AWS Solutions Architect (<span style="color: green">on it's way</span>)</p>
+                </div>
+            </section>
+            <!--Section D-->
+            <section id="section-d" class="grid">
+                <div class="box">
+                    <h2 class="content-title">
+                        Contact Me
+                    </h2>
+                    <p>Cellular: 647-573-6468
+                    </p>
+                    <p>email: jafarli.elvin@gmail.com</p>
+                </div>
+                <div class="box">
+                    <h2 class="content-title">About Me</h2>
+                    <p>
+                        Hello there 🙋🏻‍♂️, I was born in Azerbaijan 🇦🇿 and have lived in over 5 countries 🗺. I speak 5 languages and I am a former 
+                        professional wrestler 🤼‍♂️. I love solving challenges imposed by software engineering and always strive for learning new skills.
+                        Currently I am developing my software skills and in the near future I want to be a Solutions Architect.
+                </div>
+            </section>
+        </main>
+        <footer id="main-footer" class="grid">
+            <div>Elvin Jafarli</div>
+            <div>Project by <span>@ElvinJafarli</span> with ❤️</div>
+        </footer>
+        
+    </body>
 </html>
